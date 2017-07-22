@@ -36,7 +36,7 @@ class Home extends Component {
   };
 
   handleOptionPress = () => {
-    console.log("handle option press");
+    this.props.navigation.navigate("Options", { title: "Quote Currency" });
   };
 
   render() {
