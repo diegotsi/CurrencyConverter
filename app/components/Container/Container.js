@@ -1,5 +1,5 @@
 import React, { PropTypes } from "react";
-import { View, TouchableWithoutFeedback, Keyboard } from "react-native";
+import { View } from "react-native";
 
 import styles from "./styles";
 
@@ -9,11 +9,9 @@ const Container = ({ children, backgroundColor }) => {
     containerStyles.push({ backgroundColor });
   }
   return (
-    <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-      <View style={containerStyles}>
-        {children}
-      </View>
-    </TouchableWithoutFeedback>
+    <View style={containerStyles}>
+      {children}
+    </View>
   );
 };
 
